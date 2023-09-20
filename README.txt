@@ -4,13 +4,13 @@
 	email: dita.roushdy@gmail.com/aabdelfattah@cemm.at
 
        
-       	Readme: 
+       	Readme (OPaL_One): 
       	       (OPaL_One) returns average source cell (SC) expression outputs from 
        	        a fixed set of condition inputs by using the OPaL_Single_Run function. 
 	        Please keep both files (OPaL_One and OPaL_Single_Run) in the same directory.
 		Input parameters in OPaL_One, Output parameters can be extracted from the MATLAB workspace
 
-       	Inputs:
+       	Inputs (OPaL_One):
            size:       The number of elements (cells) in the domain (currently set at 46 um)
            nuc_wid:    The width of a cell's nucleus, this is used to
                        calculate domain lenght (currently set at 6 um)
@@ -28,7 +28,7 @@
            a:          Activation signal amplitude (currently set at 1)
 
 `      
-	Outputs:
+	Outputs(OPaL_One):
            Exp_scattering_organoids: Average scattering expression fraction
            Exp_patterning_organoids: Average patterning expression fraction
            Exp_negative_organoids: Average negative expression fraction
@@ -41,3 +41,36 @@
                          still detect a pole)
               Columns 4 to 10: pole position (degs) for every pole
                                detected in the organoid
+
+_______________________________________________________________________________________________________________________
+	
+	Readme (OPaL_Multiple): 
+      	       (OPaL_Multiple) returns 3 matrices for each of the expression phenotype
+		Scattered, Patterend and Negative. The matrices map parameter space as 
+		defined by the user input of threshold variation and exponential decay 
+		constant variation and used the function defined in OPaL_Multiple_Run.
+		Please keep both files (OPaL_Multiple and OPaL_Multiple_Run) in the same directory.
+		Input parameters in OPaL_Multiple, Output parameters can be extracted from the MATLAB workspace
+
+	Inputs (OPaL_Multiple):
+           size:          The number of elements (cells) in the domain (currently set at 46 um)
+           nuc_wid:       The width of a cell's nucleus, this is used to
+                          calculate domain lenght (currently set at 6 um)
+           time:          The number of time steps (currently set at 10 steps)
+           iterations:    The number of iterations OPaL will run, this is the
+                          number that will be used for averaging (analogous to number of
+                          observed organoids in a culture)
+           induciton:     Defines the fraction of initial SCs in a domain
+                          (currently set at 0.5))
+           a:             Activation signal amplitude (currently set at 1)	
+	   threshold_ini: Initial threshold value
+	   threshold_end: Final threshold value
+	   threshold_inc: Threshold increment value
+	   ca_ini: Initial exponential decay value
+	   ca_end: Final exponential decay value
+	   ca_inc: exponential decay increment value
+
+	Outputs(OPaL_Multiple):
+           result_matrix_scattering: Average scattering expression fraction for every tested condition
+           result_matrix_patterning: Average patterning expression fraction for every tested condition
+           result_matrix_negative: Average negative expression fraction for every tested condition
