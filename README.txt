@@ -1,7 +1,7 @@
 				Organoid Patterning aLgorithm (OPaL)	
 
 	Author: Abdel Rahman Abdel Fattah
-	email: dita.roushdy@gmail.com/aabdel.fattah@cemm.at
+	email: dita.roushdy@gmail.com/aabdelfattah@cemm.at
 
        
        	Readme: 
